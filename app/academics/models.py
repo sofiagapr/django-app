@@ -32,7 +32,7 @@ class Students(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null = True, blank = True)
 
-class identification_types(models.Model):
+class Identification_type(models.Model):
     name = models.CharField(max_length = 50)
     abrev = models.CharField(max_length = 10)
     descrip =  models.CharField(max_length = 100)
@@ -40,7 +40,7 @@ class identification_types(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null = True, blank = True)
 
-class city(models.Model):
+class City(models.Model):
     name = models.CharField(max_length = 100)
     abrev = models.CharField(max_length = 10)  
     descrip = models.CharField(max_length = 10)
@@ -49,7 +49,7 @@ class city(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null = True, blank = True)
 
-class departments(models.Model):
+class Department(models.Model):
     name = models.CharField(max_length = 100)
     abrev = models.CharField(max_length = 10)  
     descrip = models.CharField(max_length = 10)
@@ -58,7 +58,7 @@ class departments(models.Model):
     updated_at = models.DateTimeField(default = datetime.datetime.now())
     deleted_at = models.DateTimeField(null = True, blank = True)
 
-class countries(models.Model):
+class Country(models.Model):
     name = models.CharField(max_length = 100)
     abrev = models.CharField(max_length = 10)  
     descrip = models.CharField(max_length = 10)
