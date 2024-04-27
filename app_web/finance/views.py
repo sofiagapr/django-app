@@ -5,16 +5,16 @@ from .models import Cliente, Transaccion
 
 class ClienteView(ListView):
     model = Cliente
-    template_name = 'listar_cliente.html'  # Nombre del template donde se mostrará la lista de clientes
-    context_object_name = 'clientes'  # Nombre del contexto que contendrá la lista de clientes
+    template_name = 'listar_cliente.html'  
+    context_object_name = 'clientes'  
 
     def get_queryset(self):
-        return Cliente.objects.all()  # Obtener todos los clientes
+        return Cliente.objects.all()  
 
 class TransaccionView(ListView):
     model = Transaccion
-    template_name = 'listar_transaccion.html'  # Nombre del template donde se mostrará la lista de transacciones
-    context_object_name = 'transacciones'  # Nombre del contexto que contendrá la lista de transacciones
+    template_name = 'listar_transaccion.html'  
+    context_object_name = 'transacciones'  
 
     def get_queryset(self):
-        return Transaccion.objects.all()  # Obtener todas las transacciones
+        return Transaccion.objects.all()  
