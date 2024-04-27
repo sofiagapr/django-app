@@ -1,14 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Transacciones</title>
+    <style>
+        /* Estilos CSS */
+        .container {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+        li:hover {
+            background-color: #eaeaea;
+        }
+    </style>
 </head>
 <body>
-    <h1>Lista de Transacciones</h1>
-    <ul>
-    {% for transaccion in transacciones %}
-        <li>Cliente: {{ transaccion.cliente_producto.cliente.name }} {{ transaccion.cliente_producto.cliente.lastname }} - Producto: {{ transaccion.cliente_producto.producto.nombre_producto }} - Monto: {{ transaccion.monto }} - Tipo: {{ transaccion.tipo_transaccion.nombre }}</li>
-    {% endfor %}
-    </ul>
+    <div class="container">
+        <h1>Lista de Transacciones</h1>
+        <ul>
+            {% for transaccion in transacciones %}
+            <li>
+                <strong>Cliente:</strong> {{ transaccion.cliente_producto.cliente.name }} {{ transaccion.cliente_producto.cliente.lastname }}
+                <br>
+                <strong>Producto:</strong> {{ transaccion.cliente_producto.producto.nombre_producto }}
+                <br>
+                <strong>Monto:</strong> {{ transaccion.monto }}
+                <br>
+                <strong>Tipo:</strong> {{ transaccion.tipo_transaccion.nombre }}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
 </body>
 </html>
