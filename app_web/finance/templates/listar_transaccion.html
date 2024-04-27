@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Transacciones</title>
+</head>
+<body>
+    <h1>Lista de Transacciones</h1>
+    <ul>
+    {% for transaccion in transacciones %}
+        <li>Cliente: {{ transaccion.cliente_producto.cliente.name }} {{ transaccion.cliente_producto.cliente.lastname }} - Producto: {{ transaccion.cliente_producto.producto.nombre_producto }} - Monto: {{ transaccion.monto }} - Tipo: {{ transaccion.tipo_transaccion.nombre }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>

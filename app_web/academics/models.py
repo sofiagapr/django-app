@@ -37,7 +37,7 @@ class Person(DateTimeModel):
     age = models.IntegerField()
     ident_number = models.CharField(max_length = 12, blank = True) # blank = true que acaepte valores null
     #Crear una llave foranea 
-    id_user = models.ForeignKey(User, on_delete = models.CASCADE, default =1)
+    #id_user = models.ForeignKey(User, on_delete = models.CASCADE, default =1)
 
 
 class Students(DateTimeModel):
